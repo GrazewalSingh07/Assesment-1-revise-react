@@ -11,7 +11,7 @@ const [sortorder,setSortOder]=useState("ASC")
 useEffect(()=>{
     async function getdata(){
         try {
-           axios.get(`http://localhost:8080/candidates?_page=${page}&_limit=5&_sort=salary&_order=${sortorder}`).then((res)=>{
+           axios.get(`https://json-server-mocker-masai.herokuapp.com/candidates?_page=${page}&_limit=5&_sort=salary&_order=${sortorder}`).then((res)=>{
                 console.log(res.data)
                 setdata(res.data)
                 setLoading(false)
