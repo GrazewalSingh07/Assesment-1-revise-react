@@ -52,11 +52,11 @@ setSortOder(e.target.value)
             <option value="ASC">Ascending order</option>
             <option value="DESC">Descinding order</option>
         </select>
-        <div className="EmployeeList">
+        { loading==true?<h1>Loading</h1>:<div className="EmployeeList">
         {data.sort((a,b)=>{return a.salary-b.salary}).map((el)=>(
             <CandidateCard {...el} />
             ))}
-            </div>
+            </div>}
         </div>
 
 
